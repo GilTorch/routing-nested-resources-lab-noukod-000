@@ -13,9 +13,9 @@ class SongsController < ApplicationController
   end
 
   def show
-    begin 
+    begin
     @song = Song.find(params[:id])
-    rescue ActiveRecord::RecordNotFound 
+    rescue ActiveRecord::RecordNotFound
       redirect_to artist_songs_path
     end
   end
